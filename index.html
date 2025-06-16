@@ -1039,29 +1039,26 @@
                 <h2 class="section-title">방명록</h2>
                 <div class="guestbook-form">
                     <h3 style="text-align: center; margin-bottom: 30px; color: var(--text-primary); font-family: 'Cormorant Garamond', serif; font-size: 1.8rem;">축하 메시지를 남겨주세요</h3>
-                    <div class="form-group">
-                        <label class="form-label">이름</label>
-                        <input type="text" class="form-input" placeholder="성함을 입력해주세요">
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label">축하 메시지</label>
-                        <textarea class="form-input form-textarea" placeholder="따뜻한 축하 메시지를 남겨주세요"></textarea>
-                    </div>
-                    <div style="text-align: center;">
-                        <button class="submit-btn" onclick="submitMessage()">메시지 남기기</button>
+                    
+                    <!-- 구글 폼 임베드 -->
+                    <div style="background: white; border-radius: 15px; padding: 20px; box-shadow: var(--shadow-soft); margin: 20px 0;">
+                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdzI3-ckQfqKQYIxMRpWr_DQb4gbJa24_SuRsMjvVfgpw_56Q/viewform?embedded=true" 
+                                width="100%" 
+                                height="900" 
+                                frameborder="0" 
+                                marginheight="0" 
+                                marginwidth="0"
+                                style="border-radius: 10px;">
+                            로딩 중...
+                        </iframe>
                     </div>
                 </div>
                 
-                <div class="message-list">
-                    <div class="message-item">
-                        <div class="message-header">
-                            <span class="message-author">축하해주신 분</span>
-                            <span class="message-date">2025-01-01</span>
-                        </div>
-                        <div class="message-content">
-                            결혼을 축하드립니다! 두 분의 앞날에 행복만 가득하길 바랍니다. 💕
-                        </div>
-                    </div>
+                <div style="text-align: center; margin-top: 30px; padding: 30px; background: var(--accent-blush); border-radius: 20px;">
+                    <p style="color: var(--text-primary); font-size: 1.1rem; line-height: 1.7;">
+                        💕 소중한 축하 메시지를 남겨주셔서 감사합니다 💕<br>
+                        여러분의 따뜻한 마음이 저희에게 큰 힘이 됩니다
+                    </p>
                 </div>
             </div>
         </div>
@@ -1122,9 +1119,10 @@
             event.target.classList.add('active');
         }
 
-        // Submit message function
+        // Submit message function (구글 폼으로 대체됨)
         function submitMessage() {
-            alert('축하 메시지가 등록되었습니다! 감사합니다. ❤️');
+            // 구글 폼이 직접 처리하므로 별도 동작 불필요
+            console.log('구글 폼을 통해 메시지가 처리됩니다.');
         }
 
         // Floating hearts animation
